@@ -64,14 +64,14 @@ String dRemovePerson = 'RemovePersonTax';
 String dApprove = 'Approve';
 String dReport = 'Report';
 String dUpdatePerson = 'UpdatePerson';
-String dHeading = 'Admin';
+String dHeading = 'Taluka Admin';
 
 //options pop up
 String optCancel = "cancel";
 String optOk = "OK";
 
 //appLable
-String appLabel = 'Gram Admin';
+String appLabel = 'Taluka Admin';
 //activity type
 String actPending = "PENDING";
 String actIn = "IN";
@@ -132,7 +132,7 @@ String appBarHeadingInputInfo = "Add New Person Gram";
 String appBarHeadingRemoveInfo = "Remove Person Gram";
 String appBarMainAppInfo = 'Admin, Register, approve, make db';
 String appBarHeadingUpdateInfo = 'Update Info in Gram';
-String appBarHeadingReportInfo = 'Report Info in Gram';
+String appBarHeadingReportInfo = 'Report Info in Taluka';
 
 String tableHeadingDate = 'Date';
 String txtHtoL = "H to L";
