@@ -201,25 +201,27 @@ class _reportInfoState extends State<reportInfo> {
             children: <Widget>[
               Row(
                 children: [
-                  ElevatedButton(
-                    child: Text(
-                      bLabelSubmitRefresh,
-                    ),
-                    onPressed: pressed
-                        ? () async {
-                            var ldr = await _buildList();
-                            if (ldr.isEmpty) {
-                              gLdr = ldr;
-                              return;
-                            }
-                            setState(
-                              () {
+                  Expanded(
+                    child: ElevatedButton(
+                      child: Text(
+                        bLabelSubmitRefresh,
+                      ),
+                      onPressed: pressed
+                          ? () async {
+                              var ldr = await _buildList();
+                              if (ldr.isEmpty) {
                                 gLdr = ldr;
-                              },
-                            );
-                            pressed = false;
-                          }
-                        : null,
+                                return;
+                              }
+                              setState(
+                                () {
+                                  gLdr = ldr;
+                                },
+                              );
+                              pressed = false;
+                            }
+                          : null,
+                    ),
                   ),
                   Expanded(child: getYearTile(clrRed)),
                 ],
