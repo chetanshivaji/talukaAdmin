@@ -27,7 +27,7 @@ void main() async {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Admin",
+      title: "Admin_Taluka",
       initialRoute: WelcomeScreen.id,
       routes: {
         MyApp.id: (context) => MyApp(),
