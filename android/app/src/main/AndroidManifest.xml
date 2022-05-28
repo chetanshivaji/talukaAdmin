@@ -3,7 +3,7 @@
    <application
         android:label="admin_taluka"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/taluka_admin_icon">
         <activity
             android:name=".MainActivity"
             android:exported="true"
