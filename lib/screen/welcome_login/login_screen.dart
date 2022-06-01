@@ -30,7 +30,6 @@ class _LoginScreenState extends State<LoginScreen> {
           key: _formLoginKey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Padding(
                 padding: EdgeInsets.only(top: 60),
