@@ -20,21 +20,21 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Row(
-              children: <Widget>[
-                Text(
-                  appLabel,
-                  style: TextStyle(
-                    fontSize: 45.0,
-                    fontWeight: FontWeight.w900,
-                  ),
+            Center(
+              child: Text(
+                appLabel,
+                style: TextStyle(
+                  fontSize: 45.0,
+                  shadows: [
+                    Shadow(
+                      color: Colors.red,
+                      blurRadius: 5.0,
+                      offset: Offset(0.0, 5.0),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-            SizedBox(
-              height: 48.0,
+              ),
             ),
             Padding(
               padding: EdgeInsets.symmetric(vertical: 16.0),
@@ -48,7 +48,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     //Go to login screen.
                     Navigator.pushNamed(context, LoginScreen.id);
                   },
-                  minWidth: 200.0,
+                  minWidth: 150.0,
                   height: 42.0,
                   child: Text(
                     bLabelAdminlogin,
@@ -68,7 +68,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     //Go to registration screen.
                     Navigator.pushNamed(context, RegistrationScreen.id);
                   },
-                  minWidth: 200.0,
+                  minWidth: 150.0,
                   height: 42.0,
                   child: Text(
                     bLabelAdminRegiter,
@@ -82,7 +82,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               },
               child: Text(
                 labelForgotPassword,
-                style: TextStyle(color: Colors.blueGrey),
+                style: TextStyle(
+                  color: Colors.blueGrey,
+                  decoration: TextDecoration.underline,
+                ),
               ),
             ),
           ],

@@ -53,6 +53,9 @@ class MyApp extends StatelessWidget {
           ],
         ),
         drawer: Drawer(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20.0),
+          ),
           child: ListView(
             padding: EdgeInsets.zero,
             children: <Widget>[
@@ -73,6 +76,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               ListTile(
+                shape: getListTileShapeForDrawer(),
                 leading: Icon(Icons.report),
                 title: Text(dReport),
                 tileColor: clrRed, //red

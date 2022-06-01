@@ -35,82 +35,78 @@ class _LoginScreenState extends State<LoginScreen> {
               Padding(
                 padding: EdgeInsets.only(top: 60),
               ),
-              Expanded(
-                child: TextFormField(
-                  keyboardType: TextInputType.emailAddress,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return msgEnterEmail;
-                    }
-                    email = value;
-                    return null;
-                  },
-                  decoration: InputDecoration(
-                    icon: Icon(Icons.email),
-                    labelText: labelAdminEmail,
-                    hintText: msgEnterEmail,
-                    contentPadding:
-                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(32.0),
-                      ),
+              TextFormField(
+                keyboardType: TextInputType.emailAddress,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return msgEnterEmail;
+                  }
+                  email = value;
+                  return null;
+                },
+                decoration: InputDecoration(
+                  icon: Icon(Icons.email),
+                  labelText: labelAdminEmail,
+                  hintText: msgEnterEmail,
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(32.0),
                     ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: Colors.lightBlueAccent, width: 1.0),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(32.0),
-                      ),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: Colors.lightBlueAccent, width: 1.0),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(32.0),
                     ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: Colors.lightBlueAccent, width: 2.0),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(32.0),
-                      ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: Colors.lightBlueAccent, width: 2.0),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(32.0),
                     ),
                   ),
                 ),
               ),
               SizedBox(
-                height: 8.0,
+                height: 20.0,
               ),
-              Expanded(
-                child: TextFormField(
-                  obscureText: true,
-                  keyboardType: TextInputType.text,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return msgEnterPassword;
-                    }
-                    password = value;
-                    return null;
-                  },
-                  decoration: InputDecoration(
-                    icon: Icon(Icons.password),
-                    labelText: labelAdminPassword,
-                    hintText: msgEnterPassword,
-                    contentPadding:
-                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(32.0),
-                      ),
+              TextFormField(
+                obscureText: true,
+                keyboardType: TextInputType.text,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return msgEnterPassword;
+                  }
+                  password = value;
+                  return null;
+                },
+                decoration: InputDecoration(
+                  icon: Icon(Icons.password),
+                  labelText: labelAdminPassword,
+                  hintText: msgEnterPassword,
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(32.0),
                     ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: Colors.lightBlueAccent, width: 1.0),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(32.0),
-                      ),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: Colors.lightBlueAccent, width: 1.0),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(32.0),
                     ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: Colors.lightBlueAccent, width: 2.0),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(32.0),
-                      ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: Colors.lightBlueAccent, width: 2.0),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(32.0),
                     ),
                   ),
                 ),
