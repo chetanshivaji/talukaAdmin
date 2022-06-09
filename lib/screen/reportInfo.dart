@@ -90,16 +90,19 @@ class _reportInfoState extends State<reportInfo> {
             if (value.exists) {
               //if already present get and update.
               int totalHouse,
+                  totalHouseAfterDiscountFine,
                   pendingHouse,
                   collectedHouse,
                   totalWater,
                   pendingWater,
                   collectedWater;
-              totalHouse = pendingHouse = collectedHouse =
-                  totalWater = pendingWater = collectedWater = 0;
+              totalHouse = totalHouseAfterDiscountFine = pendingHouse =
+                  collectedHouse =
+                      totalWater = pendingWater = collectedWater = 0;
 
               var y = value.data();
               totalHouse = y![keyYfTotalHouse];
+              totalHouseAfterDiscountFine = y[keyYfTotalHouseAfterDiscountFine];
               pendingHouse = y[keyYfPendingHouse];
               collectedHouse = y[keyYfCollectedHouse];
 
@@ -108,13 +111,19 @@ class _reportInfoState extends State<reportInfo> {
               collectedWater = y[keyYfCollectedWater];
 
               double percentCollectedHouse = 0.0;
-
               percentCollectedHouse = (100 * collectedHouse) / totalHouse;
               int intPCH = percentCollectedHouse.floor();
+
+              double percentCollectedHouseAfterDF = 0.0;
+              percentCollectedHouseAfterDF =
+                  (100 * collectedHouse) / totalHouseAfterDiscountFine;
+              int intPCHAfterDiscountFine =
+                  percentCollectedHouseAfterDF.floor();
 
               double percentCollectedWater = 0.0;
               percentCollectedWater = (100 * collectedWater) / totalWater;
               int intPCW = percentCollectedWater.floor();
+
               srNo = srNo + 1;
               ldataCell.add(DataCell(Text(
                 srNo.toString(),
@@ -130,6 +139,8 @@ class _reportInfoState extends State<reportInfo> {
                 ),
               );
               ldataCell.add(DataCell(Text(totalHouse.toString())));
+              ldataCell
+                  .add(DataCell(Text(totalHouseAfterDiscountFine.toString())));
               ldataCell.add(DataCell(Text(pendingHouse.toString())));
               ldataCell.add(
                 DataCell(
@@ -138,6 +149,17 @@ class _reportInfoState extends State<reportInfo> {
                         " " +
                         " (" +
                         (intPCH).toString() +
+                        "%)",
+                  ),
+                ),
+              );
+              ldataCell.add(
+                DataCell(
+                  Text(
+                    collectedHouse.toString() +
+                        " " +
+                        " (" +
+                        (intPCHAfterDiscountFine).toString() +
                         "%)",
                   ),
                 ),
@@ -258,6 +280,12 @@ class _reportInfoState extends State<reportInfo> {
                       ),
                       DataColumn(
                         label: Text(
+                          tableHeading_totalHouseAfterDisFine,
+                          style: getStyle(actIn),
+                        ),
+                      ),
+                      DataColumn(
+                        label: Text(
                           tableHeading_pendingHouse,
                           style: getStyle(actIn),
                         ),
@@ -265,6 +293,12 @@ class _reportInfoState extends State<reportInfo> {
                       DataColumn(
                         label: Text(
                           tableHeading_collectedHouse,
+                          style: getStyle(actIn),
+                        ),
+                      ),
+                      DataColumn(
+                        label: Text(
+                          tableHeading_collectedHouseAfterDisFine,
                           style: getStyle(actIn),
                         ),
                       ),

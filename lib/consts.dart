@@ -88,6 +88,9 @@ String tableHeading_srNum = "SrNum.";
 String tableHeading_year = "Year";
 String tableHeading_village = "Village";
 String tableHeading_totalHouse = "TotalHouse";
+String tableHeading_totalHouseAfterDisFine = "TotalHouse After Discount Fine";
+String tableHeading_collectedHouseAfterDisFine =
+    "CollectedHouse After Discount Fine";
 String tableHeading_pendingHouse = "PendingHouse";
 String tableHeading_collectedHouse = "CollectedHouse";
 String tableHeading_totalWater = "TotalWater";
@@ -169,6 +172,7 @@ String keyTotalIn = 'totalIn';
 String keyTotalOut = 'totalOut';
 
 String keyYfTotalHouse = 'yfTotalHouse';
+String keyYfTotalHouseAfterDiscountFine = 'yfTotalHouseAfterDiscountFine';
 String keyYfCollectedHouse = 'yfCollectedHouse';
 String keyYfPendingHouse = 'yfPendingHouse';
 
