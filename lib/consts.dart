@@ -316,6 +316,7 @@ String sTaluka = "Gadhinglaj";
 var states = [
   "Maharashtra",
   "Karnataka",
+  "testState",
 ];
 var districts = [
   "Kolhapur",

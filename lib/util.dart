@@ -216,6 +216,7 @@ Future<void> createDBOfVillages() async {
     var states = [
       "Maharashtra",
       "Karnataka",
+      "testState",
     ];
     Map<String, List<String>> districts = {
       "Maharashtra": [
@@ -227,23 +228,18 @@ Future<void> createDBOfVillages() async {
         "Belgaum",
         "Bagalkot",
       ],
+      "testState": [
+        "testDistrict",
+      ],
     };
     Map<String, List<String>> talukas = {
-      "Kolhapur": [
-        "Gadhinglaj",
-        "Ajara",
-        "Chandgad",
-      ],
-      "Sangali": [
-        "Ashta",
-        "Vita",
-      ],
-      "Satara": [
-        "Mahabaleshwar",
-        "Karad",
-      ],
+      "Kolhapur": ["Gadhinglaj", "Ajara", "Chandgad"],
+      "Sangali": ["Ashta", "Vita"],
+      "Satara": ["Mahabaleshwar", "Karad"],
+      "testDistrict": ["testTaluka"],
       "Belgaum": ["Gokak", "Hukkeri"],
       "Bagalkot": ["Badami", "Mudhol"],
+      "testTaluka": ["testVillage1", "testVillage2"],
     };
     Map<String, List<String>> villages = {
       "Gadhinglaj": ["Vadarage", "Nangnur", "Noor", "Kadgaon"],
