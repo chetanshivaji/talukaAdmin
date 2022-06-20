@@ -320,8 +320,11 @@ var states = [
 ];
 var districts = [
   "Kolhapur",
+  "Satara",
 ];
 
 var talukas = [
   "Gadhinglaj",
+  "Ajara",
+  "Chandgad",
 ];
